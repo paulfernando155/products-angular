@@ -7,8 +7,12 @@ import { Product } from '../interfaces/product';
 })
 export class ProductsService {
 
-  URI = 'http://localhost:4000/api/categories';
+  URI = 'http://localhost:4000/api/products';
 
   constructor(private http: HttpClient) { }
+
+  getProduct(id: string) {
+    return this.http.get<{ product: Product }>(`${this.URI}/${id}`);
+  }
 
 }

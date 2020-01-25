@@ -20,11 +20,13 @@ export class CategoriesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.categoriesService.getCategories().subscribe(res => this.categories = res, err => console.log(err));
+    this.categoriesService.getCategories().subscribe((res) => {
+      this.categories = res.categories
+    }, err => console.log(err));
   }
 
   selectedCard(id: string) {
-    this.router.navigate(['/category', id]);
+    this.router.navigate(['/categories', id]);
   }
 
 }

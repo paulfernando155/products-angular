@@ -14,10 +14,10 @@ export class CategoriesService {
   constructor(private http: HttpClient) { }
 
   getCategories() {
-    return this.http.get<Category[]>(this.URI);
+    return this.http.get<{ categories: Category[] }>(this.URI);
   }
 
-  getProducts(id: string) {
-    return this.http.get<Product[]>(`${this.URI}/id`);
+  getCategory(id: string) {
+    return this.http.get<{ category: Category, products: Product[] }>(`${this.URI}/${id}`);
   }
 }

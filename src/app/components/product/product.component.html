@@ -1,1 +1,93 @@
-<p>product works!</p>
+<div class="container">
+    <div class="row" *ngIf="!product; else main_content">
+        <h1>Loading...</h1>
+    </div>
+    <ng-template #main_content>
+        <div class="row">
+            <div class="col-md-8 ">
+                <div class="mt-md-5 mt-4">
+                    >&nbsp;<a routerLink="/home">Inicio</a>
+                    >&nbsp;<a routerLink="/categories">Categorías</a>
+                    >&nbsp;<a routerLink="/categories/123123">Categoría X</a>
+                </div>
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mt-md-4 mt-3" alt="Responsive image">
+                <h1 class="font-weight-bold mt-md-4 mt-3">{{product.name}}</h1>
+                <div class="text-muted">{{product.description}}</div>
+                <!-- <div class="text-muted">Codigo del fabricante: </div> -->
+                <div class="text-muted">Codigo interno: <span class="font-weight-bold">{{product.categoryId}}</span>
+                </div>
+                <div class="text-muted">Stock: <span class="font-weight-bold">1</span></div>
+                <div class="mt-3 text-success">
+                    <h2>S/.{{product.price}}</h2>
+                    <ul>
+                        <li class="font-weight-bold">Precio incluye el I.G.V.</li>
+                        <li>Precio sujeto a cambios sin previo aviso.</li>
+                        <li>Precio no incluye envio.</li>
+                    </ul>
+                </div>
+                <!-- <form class="mt-4">
+                <div class="form-group">
+                    <select class="form-control" style="width: 175.67px;">
+                        <option>Seleccione</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary"><span><i
+                            class="fas fa-shopping-cart"></i></span>
+                    &nbsp;Agregar al carrito</button>
+            </form> -->
+                <div class="my-5">
+                    <h4 class="text-uppercase">
+                        <span class="font-weight-bold">Productos</span>
+                        <span class="font-weight-normal">&nbsp;relacionados</span>
+                    </h4>
+                    <div class="my-4">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col mb-4">
+                                <div class="card h-100 card-pointer text-center">
+                                    <img src="assets/sasuke-rinnegan.png" class="img-fluid" alt="Responsive image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">gaaaa</h5>
+                                        <p class="card-text">XDDDDDDDDDD</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card h-100 card-pointer">
+                                    <img src="assets/sasuke-rinnegan.png" class="img-fluid" alt="Responsive image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">gaaaa</h5>
+                                        <p class="card-text">XDDDDDDDDDD</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card h-100 card-pointer">
+                                    <img src="assets/sasuke-rinnegan.png" class="img-fluid" alt="Responsive image">
+                                    <div class="card-body bg-light">
+                                        <h5 class="card-title">gaaaa</h5>
+                                        <p class="card-text">XDDDDDDDDDD</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+                <img src="assets/sasuke-rinnegan.png" class="img-fluid mb-4" alt="Responsive image">
+            </div>
+        </div>
+    </ng-template>
+</div>

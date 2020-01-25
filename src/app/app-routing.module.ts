@@ -19,11 +19,11 @@ const routes: Routes = [
     component: CategoriesComponent
   },
   {
-    path: 'categories/:categoryId',
+    path: 'categories/:id',
     component: ProductsComponent
   },
   {
-    path: 'categories/:category/:product',
+    path: 'products/:id',
     component: ProductComponent
   },
   {
@@ -31,11 +31,11 @@ const routes: Routes = [
     component: CartComponent
   },
   {
-    path: 'sign-in',
+    path: 'signin',
     component: SignInComponent
   },
   {
-    path: 'sign-up',
+    path: 'signup',
     component: SignUpComponent
   },
   {
